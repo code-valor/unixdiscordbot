@@ -1,7 +1,7 @@
 {
   "owner": ["706938278955188305", "450732101608931328"],
-  "token": "",
+  "token": "env.token",
   "default_prefix": "!",
   "riotapikey": "",
-  "googleKey": ""
+  "googleKey": "env.googleKey"
 }
