@@ -161,7 +161,7 @@ client.on("message", message => {
   }
 });
 
-client.login(env.token);
+client.login(process.env.token);
 
 const express = require("express");
 const app = express();
@@ -176,8 +176,8 @@ app.listen(port, () =>
 const valorJS = require('valor.js');
 
 const muzikBotu = new valorJS.MuzikBotu({
-  googleKey: env.googleKey,
-  discordToken: env.token,
+  googleKey: process.env.googleKey,
+  discordToken: process.env.token,
   prefix: '!'
 });
 
