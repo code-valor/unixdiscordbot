@@ -8,15 +8,6 @@ const snekfetch = require("snekfetch");
 const request = require("node-superfetch");
 // ?
 
-// - Heroku Request
-var reqTimer = setTimeout(function wakeUp() {
-   request("https://unix-bot.herokuapp.com", function() {
-      console.log("WAKE UP DYNO");
-   });
-   return reqTimer = setTimeout(wakeUp, 1200000);
-}, 1200000);
-// -
-
 const client = new discord.Client({
   disableEveryone: true // what does this disable thing do?
 });
