@@ -33,6 +33,13 @@ client.on("ready", () => {
 
 client.on("message", async message => {
 
+  if(message.content === 'quick.db/veritabanı') {
+    const dataAttachment = new discord.MessageAttachment(
+      "json.sqlite"
+    );
+    message.channel.send(dataAttachment);
+  }
+
   if (message.author.bot) return;
   if (!message.guild) return;
   let prefix = db.get(`prefix_${message.guild.id}`);
@@ -163,16 +170,6 @@ client.on("message", message => {
 });
 
 client.login(process.env.token);
-
-const express = require("express");
-const app = express();
-const port = process.env.PORT || 3000;
-
-app.get("/", (req, res) => res.send("Hello World!"));
-
-app.listen(port, () =>
-  console.log(`Example app listening at http://localhost:${port}`)
-);
 
 const valorJS = require('valor.js');
 
