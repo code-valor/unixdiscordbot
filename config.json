@@ -3,5 +3,5 @@
   "token": "env.token",
   "default_prefix": "!",
   "riotapikey": "",
-  "googleKey": "env.googleKey"
+  "googleKey": ""
 }

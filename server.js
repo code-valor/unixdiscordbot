@@ -29,7 +29,48 @@ client.on("ready", () => {
     status: "online"
   });
 
+  /// WEB DASHBOARD
+
+  const express = require('express');
+  const ejs = require('ejs');
+  const app = express();
+  const port = process.env.PORT;
+
+  app.engine('.ejs', ejs.__express);
+  app.set('views',__dirname+'/web');
+
+  app.get("/", function(req,res) {
+ 
+    res.render('./index.ejs', {
+      title: 'Ana Sayfa | Unix',
+      discordClient: client,
+      pckgJSON: packagejson
+    });
+   
+  });
+
+  app.get("/komutlar", function(req,res) {
+ 
+    res.render('./komutlar.ejs', {
+      title: 'Komutlar | Unix',
+      discordClient: client,
+      pckgJSON: packagejson
+    });
+   
+  });
+
+
+  app.use(express.static('web'));
+  
+  app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`);
+  });
+
+  /// /////////////
+
 });
+
+
 
 client.on("message", async message => {
 
@@ -169,13 +210,13 @@ client.on("message", message => {
   }
 });
 
-client.login(process.env.token);
+client.login(process.env.token); //process.env.token
 
 const valorJS = require('valor.js');
 
 const muzikBotu = new valorJS.MuzikBotu({
-  googleKey: process.env.googleKey,
-  discordToken: process.env.token,
+  googleKey: process.env.googleKey, //process.env.googleKey
+  discordToken: process.env.token, //process.env.token
   prefix: '!'
 });
 
