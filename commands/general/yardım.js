@@ -20,7 +20,7 @@ module.exports = {
               cmd =>
                 `**${default_prefix}${cmd.name}** | **Kategori:** ${cmd.category}`
             )
-            .join("\n\n")}\n\n**Bilgi:** Bir komut hakkında detaylı bilgi için \`${default_prefix}yardım <komut-ismi>\`\n\n**Mevcut Sunucu Prefix'i:** ${db.get(`prefix_${message.guild.id}`) || default_prefix}`
+            .join("\n\n")}\n\n**Web Sitemiz:** https://unix-bot.herokuapp.com\n\n**Bilgi:** Bir komut hakkında detaylı bilgi için \`${default_prefix}yardım <komut-ismi>\`\n\n**Mevcut Sunucu Prefix'i:** ${db.get(`prefix_${message.guild.id}`) || default_prefix}`
         );
       setTimeout(function() {
         message.channel.send(helpEmbed);
