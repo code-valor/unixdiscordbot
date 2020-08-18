@@ -10,10 +10,13 @@ module.exports = {
   
   if(!args[0]) return message.channel.send('Lütfen isminizi belirtin!');
   if(!args[1]) return message.channel.send('Lütfen yaşınızı belirtin!');
-  
+    
+    try {
  message.author.setNickname(`${args[0]}/${args[1]}`);
     message.channel.send(`Başarıyla kayıt oldunuz, ${args[0]}!`);
-  
+    } catch(err) {
+      console.log(err);
+    }
 }
 };
   
