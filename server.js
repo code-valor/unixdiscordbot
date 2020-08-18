@@ -24,7 +24,7 @@ client.on("ready", () => {
   console.log("Bot is ready!");
   client.user.setPresence({
     activity: {
-      name: `!yardım | !arksunucum | !prefix | Versiyon ${packagejson.version} | ${client.guilds.cache.size} Sunucu`
+      name: `unix-bot.herokuapp.com | !yardım | !arksunucum | !prefix | Versiyon ${packagejson.version} | ${client.guilds.cache.size} Sunucu`
     },
     status: "online"
   });
