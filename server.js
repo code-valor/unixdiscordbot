@@ -58,6 +58,16 @@ client.on("ready", () => {
     });
    
   });
+  
+    app.get("/api", function(req,res) {
+ 
+    res.render('./api.ejs', {
+      title: 'Raw API | Unix',
+      discordClient: client,
+      pckgJSON: packagejson
+    });
+   
+  });
 
 
   app.use(express.static('web'));
