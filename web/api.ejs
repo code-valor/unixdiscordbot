@@ -12,6 +12,16 @@
    </head>
 
    <body>
-       <p class="sunucu-sayisi-text">Sunucu Sayısı:</p>&nbsp;<p class="sunucu-sayisi"><%= discordClient.guilds.cache.size %></p>
+       <p><span class="sunucu-sayisi-text">Sunucu Sayısı:</span>&nbsp;<span class="sunucu-sayisi"><%= discordClient.guilds.cache.size %></span></p>
+       <br>
+       <p><span class="kullanici-sayisi-text">Kullanıcı Sayısı:</span>&nbsp;<span class="kullanici-sayisi"><%= discordClient.users.cache.size %></span></p>
+       <br>
+       <p><span class="kanal-sayisi-text">Kanal Sayısı:</span>&nbsp;<span class="kanal-sayisi"><%= discordClient.channels.cache.size %></span></p>
+       <br>
+       <p><span class="komut-sayisi-text">Komut Sayısı:</span>&nbsp;<span class="komut-sayisi"><%= discordClient.commands.size %></span></p>
+       <br>
+       <p><span class="node-versiyon-text">Node.JS Sürümü:</span>&nbsp;<span class="node-versiyon"><%= pckgJSON.engines.node %></span></p>
+       <br>
+       <p><span class="bot-versiyon-text">Bot Versiyonu:</span>&nbsp;<span class="bot-versiyon"><%= pckgJSON.version %></span></p>
     </body>
  </html>
